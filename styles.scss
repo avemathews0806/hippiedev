@@ -126,9 +126,9 @@ nav {
     padding: 60px 30px;
     display: flex;
     align-items: end;
+    gap: 30px;
 
     .left-col {
-        width: 70%;
 
         h1 {
             font-family: var(--headerFont);
@@ -145,7 +145,6 @@ nav {
         }
     }
     .right-col {
-        width: 30%;
 
         p {
             padding-bottom: 1.2rem;

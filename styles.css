@@ -130,9 +130,7 @@ nav .menu .info-flex .info-link p {
   padding: 60px 30px;
   display: flex;
   align-items: end;
-}
-#splash .left-col {
-  width: 70%;
+  gap: 30px;
 }
 #splash .left-col h1 {
   font-family: var(--headerFont);
@@ -145,9 +143,6 @@ nav .menu .info-flex .info-link p {
 #splash .left-col h1 .top {
   display: block;
   transform: translateX(20px);
-}
-#splash .right-col {
-  width: 30%;
 }
 #splash .right-col p {
   padding-bottom: 1.2rem;
