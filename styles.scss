@@ -18,7 +18,7 @@
 /* Gradient Background */
 
 body {
-	background: linear-gradient(-45deg, #ceb5fd, #dfbbfe, #bfbbff, #e8c2fd);
+	background: linear-gradient(-45deg, #1fb17c, #51c097, #9dcda5, #45bf7b);
 	background-size: 400% 400%;
 	animation: gradient 9s ease infinite;
 	height: 100vh;
@@ -65,20 +65,54 @@ nav {
         }
     }
     .menu {
+        display: flex;
+        gap: 40px;
         
-        ul {
+        .info-flex {
             display: flex;
-            gap: 30px;
+            align-items: center;
+            gap: 20px;
+            border: 2px solid var(--secondaryColor);
+            text-decoration: none;
 
-            li {
-                list-style: none;
+            &:hover .phone img {
+                animation: shake 0.5s;
+                
+            }
+            @keyframes shake {
+                0% { transform: translate(0, 0); }
+                10% { transform: translate(-2px, 0); }
+                20% { transform: translate(2px, 0); }
+                30% { transform: translate(-2px, 0); }
+                40% { transform: translate(2px, 0); }
+                50% { transform: translate(-2px, 0); }
+                60% { transform: translate(2px, 0); }
+                70% { transform: translate(-2px, 0); }
+                80% { transform: translate(2px, 0); }
+                90% { transform: translate(-2px, 0); }
+                100% { transform: translate(0, 0); }
+            }
+            &:hover .email img {
+                transform: translateY(-50px)
+              }
+            .info-img {
+                height: 50px;
+                background-color: var(--secondaryColor);
+                overflow: hidden;
 
-                a {
-                    text-decoration: none;
-                    font-family: var(--bodyFont);
+                img {
+                    width: 25px;
+                    padding: 13px;
+                    transition: transform .45s ease-in-out;
+                }
+            }
+            .info-link {
+                padding-right: 20px;
+
+                p {
+                    font-family: var(--headerFont);
                     color: var(--secondaryColor);
-                    font-size: 1.5rem;
-                    font-weight: 300;
+                    font-size: 18px;
                 }
             }
         }
@@ -115,7 +149,12 @@ nav {
 
         p {
             padding-bottom: 1.2rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+
+            img {
+                width: 30px;
+                transform: translateY(5px);
+            }
         }
     }
 }
@@ -123,7 +162,7 @@ nav {
 /* Projects */
 
 #projects {
-    padding: 0 60px;
+    padding: 0 60px 60px;
 
     .projects-flex {
         display: flex;
@@ -132,9 +171,29 @@ nav {
 
         .project {
             width: calc((100% - (1 * var(--flexGap))) / 2);
-            border-radius: 6px;
             height: 350px;
-            background-color: #f7f7f7;
+            background-color: #fff;
+            transition: transform .3s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+            &:hover {
+                transform: scale(1.015);
+            }
+        }
+    }
+}
+
+
+/* Footer */
+
+footer {
+
+    .copyright {
+        padding: 0 60px 60px;
+
+        p {
+            text-align: center;
+            font-size: 14px;
         }
     }
 }
