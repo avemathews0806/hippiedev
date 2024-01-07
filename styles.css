@@ -134,7 +134,7 @@ nav .menu .info-flex .info-link p {
 }
 #splash .left-col h1 {
   font-family: var(--headerFont);
-  color: #000;
+  color: var(--secondaryColor);
   font-size: 14rem;
   letter-spacing: -9px;
   line-height: 0.9;
