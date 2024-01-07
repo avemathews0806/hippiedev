@@ -14,9 +14,9 @@
 
 /* Gradient Background */
 body {
-  background: linear-gradient(-45deg, #1fb17c, #51c097, #9dcda5, #45bf7b);
+  background: linear-gradient(-45deg, #bababa, #c1c1c1, #cecece, #d4d4d4);
   background-size: 400% 400%;
-  animation: gradient 9s ease infinite;
+  animation: gradient 12s ease infinite;
   height: 100vh;
 }
 
@@ -104,7 +104,7 @@ nav .menu .info-flex:hover .phone img {
   }
 }
 nav .menu .info-flex:hover .email img {
-  transform: translateY(-50px);
+  transform: translateY(-6px);
 }
 nav .menu .info-flex .info-img {
   height: 50px;
@@ -114,7 +114,7 @@ nav .menu .info-flex .info-img {
 nav .menu .info-flex .info-img img {
   width: 25px;
   padding: 13px;
-  transition: transform 0.45s ease-in-out;
+  transition: transform 0.36s ease-in-out;
 }
 nav .menu .info-flex .info-link {
   padding-right: 20px;
@@ -134,7 +134,7 @@ nav .menu .info-flex .info-link p {
 }
 #splash .left-col h1 {
   font-family: var(--headerFont);
-  color: red;
+  color: #000;
   font-size: 14rem;
   letter-spacing: -9px;
   line-height: 0.9;
@@ -153,9 +153,55 @@ nav .menu .info-flex .info-link p {
   transform: translateY(5px);
 }
 
+/* Jobs */
+
+#jobs .job-1 {
+  padding: 60px 45px;
+  background-color: #00000018;
+}
+#jobs .job-2 {
+  padding: 60px 45px;
+  background-color: #00000028;
+}
+#jobs .job-3 {
+  padding: 60px 45px;
+  background-color: #00000042;
+}
+#jobs .job {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#jobs .job .left .logo {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+#jobs .job .left .logo img {
+  width: 50px;
+  border-radius: 50%;
+}
+#jobs .job .left .logo-text h3 {
+  font-family: var(--headerFont);
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+#jobs .job .left .logo-text h4 {
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+#jobs .job .right p {
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 /* Projects */
 #projects {
-  padding: 0 60px 60px;
+  padding: 60px;
 }
 #projects .projects-flex {
   display: flex;
@@ -163,14 +209,101 @@ nav .menu .info-flex .info-link p {
   gap: var(--flexGap);
 }
 #projects .projects-flex .project {
-  width: calc((100% - 1 * var(--flexGap)) / 2);
-  height: 350px;
-  background-color: #fff;
-  transition: transform 0.3s ease-in-out;
+  width: calc((100% - 3 * var(--flexGap)) / 4 - 6px);
+  height: 180px;
+  transition: transform 0.25s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+#projects .projects-flex .project.boomco-project {
+  background-image: url(/media/boomco-project.png);
+  background-size: contain;
+  background-position: center;
+  border: 3px solid #f67e20;
+  position: relative;
+}
+#projects .projects-flex .project.boomco-project:before {
+  content: "Visit Site";
+  font-family: var(--headerFont);
+  background-color: #f67e20;
+  color: #fff;
+  padding: 10px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  opacity: 0;
+}
+#projects .projects-flex .project.boomco-project:hover:before {
+  opacity: 1;
+}
+#projects .projects-flex .project.grayson-project {
+  background-image: url(/media/grayson-project.png);
+  background-size: contain;
+  background-position: center;
+  border: 3px solid #0e6964;
+  position: relative;
+}
+#projects .projects-flex .project.grayson-project:before {
+  content: "Visit Site";
+  font-family: var(--headerFont);
+  background-color: #0e6964;
+  color: #fff;
+  padding: 10px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  opacity: 0;
+}
+#projects .projects-flex .project.grayson-project:hover:before {
+  opacity: 1;
+}
+#projects .projects-flex .project.busybee-project {
+  background-image: url(/media/busybee-project.png);
+  background-size: contain;
+  background-position: center;
+  border: 3px solid #269139;
+  position: relative;
+}
+#projects .projects-flex .project.busybee-project:before {
+  content: "Visit Site";
+  font-family: var(--headerFont);
+  background-color: #269139;
+  color: #fff;
+  padding: 10px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  opacity: 0;
+}
+#projects .projects-flex .project.busybee-project:hover:before {
+  opacity: 1;
+}
+#projects .projects-flex .project.trimlight-project {
+  background-image: url(/media/trimlight-project.png);
+  background-size: contain;
+  background-position: center;
+  border: 3px solid #000000;
+  position: relative;
+}
+#projects .projects-flex .project.trimlight-project:before {
+  content: "Visit Site";
+  font-family: var(--headerFont);
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  opacity: 0;
+}
+#projects .projects-flex .project.trimlight-project:hover:before {
+  opacity: 1;
+}
 #projects .projects-flex .project:hover {
-  transform: scale(1.015);
+  transform: scale(1.02);
 }
 
 /* Footer */
